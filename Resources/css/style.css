@@ -1,0 +1,515 @@
+
+html {
+  font-size: 16px; /*set root height*/
+  font-family: 'Open Sans', sans-serif;
+}
+
+/*Main Page*/
+
+header div {
+  display: flex;
+  justify-content: space-between; /*push nav link to right*/
+  color: white;
+  height: 4rem;
+}
+
+header .my-name {
+  padding-left: 3rem;
+  padding-top: 1.4rem;
+}
+
+header span {
+  padding-left: 5rem;
+}
+
+header a {
+  padding: 1rem;
+  text-decoration: none; /*remove link underline styling*/
+  color: white;
+}
+
+header a:hover {
+  color: #991923 /*Add interative styling to links*/
+}
+
+header .my-logo {
+  display: none;
+}
+
+header nav {
+  width: 40rem; /*set height of banner*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: -2.5rem;
+}
+
+
+header div:hover {
+  color: #991923
+}
+
+#dm-services-mobile {
+  display: none; /*hide personal logo*/
+}
+
+/*Media Queries*/
+
+@media only screen and (max-width: 480px) {
+
+/*create new header for mobile*/
+
+
+header div {
+  height: 6rem;
+}
+
+header span {
+  padding-left: 1rem;
+}
+
+#dm-services {
+  display: none; /*target name to hide*/
+}
+
+#dm-services-mobile {
+  display: inline-block; /*target personal logo to display*/
+}
+
+
+header .my-name {
+  display: none; /*hide name*/
+}
+
+header .my-logo {
+  display: block;  /*display block to activate hidden logo*/
+  width: 20%;
+  padding: 1rem;
+  margin: auto;
+}
+
+header img {
+  height: 4rem; /*decrease size of logo*/
+}
+
+}
+
+.jumbo { /*set main banner to occupy full width and height of page including header */
+  background: url(../images/earth.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 3rem;
+}
+
+
+/*banner*/
+
+.banner { /*display within jumbo*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 40rem;
+  background-image: cover;
+  color: white;
+}
+
+.banner h1 {
+  font-size: 4.5rem;
+  margin-top: -4rem;
+  font-family: 'Noto Serif', serif;
+  letter-spacing: 0.4rem;
+}
+
+.banner h3 {
+  font-size: 2rem;
+  font-family: 'Noto Serif', serif;
+  font-weight: 400;
+  margin-top: -2rem;
+  letter-spacing: 0.1rem;
+}
+
+@media only screen and (max-width: 480px) {
+
+/*reduce text size and align spacing*/
+
+.banner {
+  height: 25rem;
+}
+
+.banner h1 {
+  font-size: 2rem;
+  margin-top: -7rem;
+}
+
+.banner h2 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.banner h3 {
+  font-size: 1.5rem;
+}
+
+
+}
+
+
+/*Skills*/
+
+.skills {
+  margin: 0 auto 3rem auto;
+  max-width: 600px;
+}
+
+
+.skills-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+}
+
+.skills-list div {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+@media only screen and (max-width: 480px) {
+
+  .skills-list {
+    flex-direction: column; /*to display skills in uniform*/
+    align-items: center;
+  }
+
+  .skills-list div {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1rem;
+
+  }
+
+}
+
+
+/*Bio Section*/
+
+.main-section {
+  max-width: 600px; /*to keep content tight and in the middle*/
+  margin: 0 auto;
+  border-top: 0.3rem solid black;
+  border-bottom: 0.3rem solid black;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+
+.title {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+}
+
+
+.title h1 {
+  margin-bottom: 0.5rem;
+
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.title h2 {
+  margin-top: 0;
+
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.supporting {
+  display: flex; /*to display colums side by side versus on top of each other*/
+  justify-content: center;
+}
+
+
+    /* LHS section */
+
+.bio {
+  max-width: 350px;
+  padding-right: 3.125rem;
+
+  line-height: 1.7rem;
+}
+
+.bio p {
+
+  margin-top: 0;
+}
+
+
+    /* RHS section */
+
+.experience {
+  max-width: 250px;
+  padding-top: 0rem;
+}
+
+.experience h2 {
+  margin-top: 0;
+
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: MediumBlue;
+
+}
+
+/*style each child div individually for clarity*/
+
+.type {
+  list-style-type: none;
+}
+
+.type li {
+  padding: 10px 0;
+}
+
+.type {
+  padding-left: 0;
+}
+
+.type .date {
+  color: LightSlateGray;
+  font-size: 0.9rem;
+}
+
+.type .role {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+
+.type .company {
+  font-size: 0.9rem;
+}
+
+
+@media only screen and (max-width: 480px) {
+  .supporting {
+    flex-direction: column; /*to stack column on top of each other for mobile screem*/
+    align-items: center;
+  }
+
+  .bio {
+    max-width: 350px; /*added to align width*/
+    line-height: 1.3rem; /*added for ledgibility*/
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .experience {
+    max-width: 350px;
+    line-height: 1.3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-top: 1rem;
+  }
+
+}
+
+
+/*Companies*/
+
+/*basic style*/
+.companies {
+  margin-top: 2rem;
+  padding-top: 1rem;
+
+}
+
+.companies h2 {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-style: italic;
+  margin-bottom: 3rem;
+}
+
+.logos {
+  display: flex; /*to postiion elements side by side*/
+  justify-content: center;
+  width: auto;
+}
+
+
+
+/*Adds 3D perspective to container*/
+
+.companies h2 {
+  font-size: 2rem;
+}
+
+.card {
+  width: 18.75rem;
+  height: 9rem;
+  position: relative; /*to push child elements up within borders*/
+  perspective: 450px;/*lower the px, greater the 3D effect*/
+  margin-right: 3rem;
+}
+
+.card .this {
+  padding-left: 3rem;
+}
+
+.front.cfte {
+  margin-left: 2rem;
+}
+
+.back p {
+  text-align: justify;
+  line-height: 1.2rem;
+}
+
+
+/*Adds the transition properties to front and back face */
+
+/*front-face*/
+
+.card .front {
+  position: absolute; /* to limit scope to stay within .card div*/
+  backface-visibility: hidden; /*so back-face remains hidden*/
+  height: 100%;
+  width: 100%;
+  transition: 1.5s;/* how long it should take to rotate*/
+  transform: rotateY(0deg);
+
+}
+
+
+/*back-face*/
+
+.card .back {
+  position: absolute; /* to limit scope to stay within .card div*/
+  backface-visibility: hidden;
+  transition: 1.5s;
+  transform:rotateY(-180deg); /*rotate 180 to compensate for flip on hover*/
+}
+
+/*flip effect*/
+
+/*need to have css set for jQeury to work*/
+.card.flipping .back {
+  transform: rotateY(0deg); /*rotates back-face company description 180 to start position*/
+}
+
+.card.flipping .front {
+  transform: rotateY( 180deg ); /*rotates front-face on hover*/
+}
+
+/*respnsive design targeting mobile screens*/
+
+@media only screen and (max-width: 480px) {
+  .companies {
+    margin-top: 0rem;
+    margin-bottom: -3rem; /*to decrease margin so quote section closer to logo's*/
+  }
+
+  .logos {
+    flex-direction: column; /*again to stack on top of each other for seamless design on small screen*/
+    align-items: center; /*to center content because flow reversed*/
+    width: auto;
+  }
+
+  .card {
+    margin-bottom: 3rem;
+    margin-right: 0rem;
+  }
+
+  .front.cfte {
+    margin-left: 0rem;
+  }
+
+}
+
+
+
+/*Blockquote*/
+
+.quote {
+  max-width: 600px;
+  margin: 5rem auto 0 auto;
+  border-top: 0.3rem solid black;
+  padding-top: 3rem;
+
+}
+
+blockquote {
+  font-style: italic;
+  font-size: 1.2rem;
+  position: relative;
+  color: #383838;
+  text-align: justify;
+}
+
+
+blockquote::before { /*pseudo-element used to style quotation marks*/
+  content: open-quote; /*define that an Open Quote needs to be used*/
+  font-weight: bold;
+  font-size: 5rem;
+  position: absolute;
+  left: -3rem; /*to pposition quote marks outside of element*/
+  top: -3rem;
+}
+
+blockquote cite { /*to style author*/
+display: block;
+margin-top: 5px;
+font-weight: 400;
+}
+
+@media only screen and (max-width: 480px) {
+  /*align size and positionng of blockquote*/
+  blockquote {
+    font-size: 1rem;
+  }
+
+  blockquote:before {
+    font-size: 3rem;
+    position: absolute;
+    left: -2rem;
+    top: -2rem;
+  }
+
+}
+
+
+/*universal footer styles*/
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+  color: white;
+  margin-top: 5rem;
+}
+
+footer li {
+  display: inline; /*to display social icons in same line and without bullet points*/
+  padding-left: 1rem;
+}
+
+footer .copyright {
+  padding-left: 2rem;
+}
+
+@media only screen and (max-width: 480px) {
+  footer span {
+    font-size: 0.6rem;
+  }
+}
+
+footer .social {
+  padding-right: 2rem;
+
+
+
+/*media queries*/
