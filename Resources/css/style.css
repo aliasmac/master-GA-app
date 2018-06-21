@@ -347,14 +347,6 @@ header img {
   font-size: 2rem;
 }
 
-.card {
-  width: 18.75rem;
-  height: 9rem;
-  position: relative; /*to push child elements up within borders*/
-  perspective: 450px;/*lower the px, greater the 3D effect*/
-  margin-right: 3rem;
-}
-
 .card .this {
   padding-left: 3rem;
 }
@@ -368,8 +360,17 @@ header img {
   line-height: 1.2rem;
 }
 
+/*set the main card in the flipping mechanism*/
 
-/*Adds the transition properties to front and back face */
+.card {
+  width: 18.75rem;
+  height: 9rem;
+  position: relative; /*to push child elements up within borders*/
+  perspective: 450px;/*lower the px, greater the 3D effect*/
+  margin-right: 3rem;
+}
+
+/*Adds the transition properties to front and backface */
 
 /*front-face*/
 
@@ -380,7 +381,6 @@ header img {
   width: 100%;
   transition: 1.5s;/* how long it should take to rotate*/
   transform: rotateY(0deg);
-
 }
 
 
